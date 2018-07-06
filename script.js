@@ -1,15 +1,22 @@
+const link = 'http://my.linkmv.com/Home.aspx'
+
 const http = require('http');
 const $ = require('jquery');
+var request = require('request');
 
-try { //Because we can't declare classes twice.
+request(link, function(error, response, body) {
+	
+	console.log('error:', error); // Print the error if one occurred
+	console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+	console.log('body:', body); // Print the HTML.
 
-	class Listing {
 
-	}
+});
+
+class Listing {
+
 }
-catch(err) {
 
-}
 
 Listing.prototype.elt_to_obj = function(elt) {
 		
@@ -25,7 +32,7 @@ Listing.prototype.elt_to_obj = function(elt) {
 	return this;
 }
 
-
+/*
 listings = []
 
 $('#ctl00_p_rN_C_rgNewList_ctl00 tbody tr').each(function(i, e) {
@@ -36,3 +43,4 @@ $('#ctl00_p_rN_C_rgNewList_ctl00 tbody tr').each(function(i, e) {
 })
 
 console.log(listings)
+*/
