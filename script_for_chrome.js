@@ -1,14 +1,14 @@
-const link = 'http://my.linkmv.com/Home.aspx'
+var link = 'http://my.linkmv.com/Home.aspx'
 
-try {
+try{
 	class Listing {
 
 	}
 }
 catch(err)
-{
+{}
 
-}
+
 
 
 Listing.prototype.elt_to_obj = function(elt) {
